@@ -1,0 +1,23 @@
+<view class="main">
+    <view id="logo"></view>
+   <view class="center">
+    <form bindsubmit="formSubmit" bindreset="formReset">
+      <view class="section">
+        <view class="section__title">姓名:</view>
+        <input name="name" placeholder="请输入姓名" />
+      </view>
+      <view class="section2">
+        <view class="section__title">电话:</view>
+        <input name="phone"  type='number' maxlength="11" placeholder="请输入电话" />
+      </view>
+      <view class="section2">
+          <view class="section__title">密码:</view>
+          <input name="password" placeholder="请输入密码" type="password"/>
+        </view>
+      <view class="btn-area">
+        <button form-type="submit">注册</button>
+        <button form-type="reset">重置</button>
+      </view>
+    </form>
+   </view>
+</view>

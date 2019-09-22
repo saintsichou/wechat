@@ -1,0 +1,44 @@
+<!-- <view>
+    <view class="info_block">
+        <block wx:for="{{patientList}}" wx:key="key" class="item">
+                <view class="item_content">
+                    <view class="id">{{index+1}}</view>
+                    <view class="text">{{item.name}}</view>
+                    <view class="phone">{{item.phone}}</view>
+                    <view class="xunhao">{{item.postID}}</view>
+                    <view class="xunhao">{{item.date}}</view>
+                </view>
+        </block>
+    </view>
+    <view class="add-btn" bindtap="goEdit">新增报销</view>
+</view> -->
+<view class="check-list">
+        <!-- <view class="search-box">
+            <view class="search-input {{searchFlag?'':'no-padding'}}">
+                <input placeholder-style="color:#888B96;font-size:28rpx;" adjust-position="true" type="text" placeholder="搜索" bindfocus="textFocus" value="{{textInput}}" />
+                <view wx:if="{{searchFlag==false}}" class="search-cancel" bindtap="goSearch">搜索</view>
+            </view>
+        </view> -->
+        <view class="check-content"  wx:if="{{patientList.length > 0}}">
+            <block wx:for="{{patientList}}" wx:key="item._id" >
+                    <view class="check-item">
+                        <view class="check-img">
+                                <image src="{{item.avatarUrl}}"></image>
+                        </view>
+                        <view class="check-right">
+                            <view class="check-intro">名字:{{item.name}}  序列号:<text class="myid">广州-海北-XYW-2019{{(totalCount-index)*1<100?((totalCount-index)*1>10?'0'+(totalCount-index)*1:'00'+(totalCount-index)*1):(totalCount-index)*1}}</text></view>
+                            <!-- <view class="check-label">
+                                <view class="label-text green">{{index}}</view>
+                                (totalCount-index)*1<100?(totalCount-index)*1>10?'0'+(totalCount-index)*1:'00'+totalCount-index)*1:totalCount-index)*1
+                            </view> -->
+                            <view class="check-price">
+                                <view class="check-num"><text>Tel:{{item.phone}}</text></view>
+                                <view class="check-sales">时间:{{item.date}}</view>
+                            </view>
+                        </view>
+                    </view>
+            </block>
+        </view>
+        <view class="none_data" wx:else>暂无数据</view>
+        <view class="add-btn" bindtap="goEdit">新增报销</view>
+	</view>

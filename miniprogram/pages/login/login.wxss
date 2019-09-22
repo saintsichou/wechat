@@ -1,0 +1,110 @@
+/* pages/regisit/regisit.wxss */
+.main{
+  width: 100%;
+  height:100%;
+  position: relative;
+}
+.center{
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  margin:auto;
+  height: 600rpx;
+  color:#f36f56;
+  padding: 50rpx;
+  box-sizing: border-box;
+  padding-top:30rpx;
+}
+#logo{
+  width: 300rpx;
+  height:300rpx;
+  background: url('https://6b65-keenstar-5871c6-1300213761.tcb.qcloud.la/xiamuyouren.jpg?sign=a3e564c0c5f517f49fc11756b982f868&t=1568546659') no-repeat center;
+  background-size: contain;
+  margin:45rpx auto;
+}
+.btn-area{
+  margin-top:50rpx;
+}
+.btn-area>button{
+  border:none;
+  background: #f36f56;
+  color:#fff;
+  margin-top:30rpx; 
+}
+.log{
+  text-align: center;
+  margin-top:20rpx;
+  font-size: 26rpx;
+}
+
+.userinfo, .uploader, .tunnel {
+  height: 140rpx;
+  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-left: none;
+  border-right: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  transition: all 300ms ease;
+}
+
+.userinfo-avatar {
+  width: 100rpx;
+  height: 100rpx;
+  margin: 20rpx 50rpx;
+  border-radius: 50%;
+  background-size: cover;
+  background-color: white;
+}
+.name{
+  margin-left:60rpx;
+}
+.uploader, .tunnel{
+  height: auto;
+  padding: 0 0 0 40rpx;
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+
+.kf{
+  height: auto;
+  margin-top:10rpx;
+  padding: 0 0 0 0rpx;
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+.uploader-text, .tunnel-text {
+  width: 100%;
+  line-height: 52px;
+  font-size: 34rpx;
+  color: #007aff;
+}
+
+.uploader-container {
+  width: 100%;
+  height: 400rpx;
+  padding: 20rpx 20rpx 20rpx 0;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.uploader-image {
+  width: 100%;
+  height: 360rpx;
+}
+.kefu{
+  background: #fff;
+  border:none;
+  outline:none;
+  float: left;
+  width: 100%;
+}

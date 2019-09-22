@@ -1,0 +1,45 @@
+<view class="main">
+    <view id="logo" wx:if = "{{flage}}"></view>
+   <view class="center" wx:if = "{{flage}}">
+    <form bindsubmit="formSubmit" bindreset="formReset">
+      <view class="section2">
+        <view class="section__title">电话:</view>
+        <input name="phone"  type='number' maxlength="11" placeholder="请输入电话" />
+      </view>
+      <view class="section2">
+          <view class="section__title">密码:</view>
+          <input name="password" placeholder="请输入密码" type="password"/>
+        </view>
+      <view class="btn-area">
+        <button form-type="submit">登录</button>
+        <button form-type="reset">重置</button>
+        <view bindtap="btnclick" class="log">无账号?转到注册页</view>
+      </view>
+    </form>
+   </view>
+   <view class="info" wx:else>
+      <view class="userinfo">
+          <button 
+            open-type="getUserInfo" 
+            bindgetuserinfo="onGetUserInfo"
+            class="userinfo-avatar"
+            style="background-image: url({{avatarUrl}})"
+          ></button>
+          <view class="name">
+            <text>{{userInfo.nickName}}</text>
+          </view>
+        </view>
+          <!-- 上传图片 -->
+        <view class="uploader">
+          <view class="uploader-text" bindtap="doUpload">
+            <text>上传发票</text>
+          </view>
+          <view class="uploader-container" wx:if="{{imgUrl}}">
+            <image class="uploader-image" src="{{imgUrl}}" mode="aspectFit" bindtap="previewImg"></image>
+          </view>
+        </view>
+        <view class="kf">
+                <button class='kefu'  open-type='contact' session-from='weapp'>联系开发</button>
+        </view>
+   </view>
+</view>

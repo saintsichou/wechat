@@ -1,0 +1,51 @@
+<view class="content">
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="section">
+      <view class="title">个人资料(必填)</view>
+      <view class="content-desc">
+        <view class="desc-item">
+          <view class="item-label">中文姓名</view>
+          <input placeholder-style="color:#A7AAB8" adjust-position="true" type="text" placeholder="请输入中文姓名" name='name' />
+        </view>
+        <view class="desc-item">
+          <view class="item-label">手机号码</view>
+          <input maxlength='11' placeholder-style="color:#A7AAB8" adjust-position="true" type="number" placeholder="请输入手机号码" name='phone' />
+        </view>
+        <view class="desc-item">
+          <view class="item-label">申请编码个数</view>
+          <picker class="item-label2" bindchange="bindPickerChange" value="{{array[indexs]}}" range="{{array}}" name='indexs'>
+            <view class="picker">
+              {{array[indexs]}}
+            </view>
+          </picker>
+        </view>
+      </view>
+    </view>
+    <view class="section">
+      <view class="title">附加信息(选填)</view>
+      <view class="content-desc">
+        <view class="desc-item">
+          <view class="item-label">部门</view>
+          <input placeholder-style="color:#A7AAB8" adjust-position="true" type="text" placeholder="请输入部门" name='branch' />
+        </view>
+        <view class="desc-item">
+          <view class="item-label">岗位</view>
+          <input placeholder-style="color:#A7AAB8" adjust-position="true" type="text" placeholder="请输入岗位" name='post' />
+        </view>
+        <view class="desc-item">
+          <view class="item-label">工号</view>
+          <input placeholder-style="color:#A7AAB8" adjust-position="true" type="text" placeholder="请输入工号" name='worknumber' />
+        </view>
+        <view class="desc-item">
+            <view class="item-label" bindtap="doUpload">
+              <text>上传发票</text>
+            </view>
+        </view>
+      </view>
+    </view>
+    <view class="add-btn edit-btn">
+      <button class="edit-del" formType="reset">清除</button>
+      <button class='edit-sub'  formType="submit">提交</button>
+    </view>
+  </form>
+  </view>

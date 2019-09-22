@@ -1,0 +1,87 @@
+<view class="main">
+    <swiper indicator-dots='true'class='swipers'
+    autoplay="true" interval="5000" duration="1000">
+    <block wx:for="{{imgUrls}}" wx:key='{{imgUrls}}'>
+        <swiper-item>
+        <image src="{{item}}" class="slide-image" width="100%" height="150"/>
+        </swiper-item>
+    </block>
+    </swiper>
+    <view class="broast">
+        <view class="news">
+            <image src="../../images/toutiao.png" class="toutiao"></image>
+            <view class="newsFlex"></view>
+            <view class="newsIcon">
+                最热
+            </view>
+            <view class="newsContent">
+                <swiper class="swiper" vertical='true' autoplay="true" interval="5000" duration="1000" circular="true">
+                    <navigator wx:for="{{adList}}" wx:key="key">
+                        <swiper-item>
+                            <view class="news-title">{{item.title}}</view>
+                        </swiper-item>
+                    </navigator>
+                </swiper>
+            </view>
+            <image src="../images/arrow_right.png" class="arrow"></image>
+        </view>
+	</view>
+    <view class="center">
+        <view class="wrapper">
+            <view class="list list1">
+                <navigator open-type="navigate" url="/pages/regisit/regisit">
+                    <view class="nav_text">报销列表</view>
+                    <image src="../../images/android.png" class="nav_icon"></image>
+                </navigator>                        
+            </view>
+            <view class="list list2">
+                <navigator open-type="navigate" url="/pages/regisit/regisit">
+                    <view class="nav_text">报销列表</view>
+                    <image src="../../images/star.png" class="nav_icon"></image>
+                </navigator> 
+            </view>
+            <view class="list list3">
+                <navigator open-type="navigate" url="/pages/regisit/regisit">
+                    <view class="nav_text">报销列表</view>
+                    <image src="../../images/map.png" class="nav_icon"></image>
+                </navigator> 
+            </view>
+            <view class="list list4">
+                <navigator open-type="navigate" url="/pages/regisit/regisit">
+                    <view class="nav_text">报销列表</view>
+                    <image src="../../images/news.png" class="nav_icon"></image>
+                </navigator> 
+            </view>
+            <view class="list list5">
+                <navigator open-type="navigate" url="/pages/regisit/regisit">
+                    <view class="nav_text">报销列表</view>
+                    <image src="../../images/aircraft.png" class="nav_icon"></image>
+                </navigator> 
+            </view>
+            <view class="list list6">
+                <navigator open-type="navigate" url="/pages/regisit/regisit">
+                    <view class="nav_text">报销列表</view>
+                    <image src="../../images/rocket.png" class="nav_icon"></image>
+                </navigator> 
+            </view>
+            <view class="list list7">
+                <navigator open-type="navigate" url="/pages/regisit/regisit">
+                    <view class="nav_text">报销列表</view>
+                    <image src="../../images/apple.png" class="nav_icon"></image>
+                </navigator> 
+            </view>
+            <view class="list list8">
+                <navigator open-type="navigate" url="/pages/regisit/regisit">
+                    <view class="nav_text">报销列表</view>
+                    <image src="../../images/key.png" class="nav_icon"></image>
+                </navigator> 
+            </view>
+            <view class="list list9">
+                <navigator open-type="navigate" url="/pages/regisit/regisit">
+                    <view class="nav_text">报销列表</view>
+                    <image src="../../images/sun.png" class="nav_icon"></image>
+                </navigator> 
+            </view>
+        </view>
+    </view>  
+</view>
