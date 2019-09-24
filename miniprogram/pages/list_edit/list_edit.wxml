@@ -49,3 +49,6 @@
     </view>
   </form>
   </view>
+  <button class="kf_button" open-type="contact" session-from="weapp">
+      <image class="kf_image" src="https://6b65-keenstar-5871c6-1300213761.tcb.qcloud.la/my-image.jpeg?sign=d87a20961b88ba083820e8c51a05c15d&t=1568888357"></image>
+  </button>

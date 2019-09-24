@@ -78,6 +78,9 @@ debounce (func, delay) {
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    wx.showLoading({
+      title:'正在加载中...'
+    })
     var that = this
     //  调用login云函数获取openid
     wx.cloud.callFunction({
@@ -102,7 +105,8 @@ debounce (func, delay) {
         .limit(12)
         .get()
         .then(res=>{
-            console.log(res)
+            // console.log(res)
+            wx.hideLoading()
             this.setData({
                 patientList:res.data
             })
@@ -150,9 +154,7 @@ debounce (func, delay) {
    */
   onPullDownRefresh: function () {
     wx.showLoading({
-
         title: '玩命加载中',
-  
     })
     this.infos
     .orderBy('postID', 'desc')

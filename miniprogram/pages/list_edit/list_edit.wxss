@@ -81,3 +81,21 @@
   box-sizing: border-box;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
+
+.kf_button{
+  background-color: rgba(255, 255, 255, 0);
+  border: 0px;
+  height: 100rpx;
+  right: 0rpx;
+  bottom: 200rpx;
+  position: fixed;
+  border-radius: 50%;
+}
+.kf_button::after{
+  border: 0px;
+}
+.kf_image{
+  z-index: 9999;
+  width: 88rpx;
+  height: 88rpx;
+}
