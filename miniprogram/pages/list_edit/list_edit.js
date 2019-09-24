@@ -16,6 +16,7 @@ Page({
     branch:'',
     post:'',
     indexs:0,
+    userInfo: {},
     avatarUrl:'',
     insID:0
   },
@@ -47,7 +48,7 @@ Page({
             branch:branch || 'null',
             post:post || 'null',
             postID:new Date().getTime(),
-            avatarUrl:app.globalData.avatarUrl,
+            avatarUrl:this.data.avatarUrl || app.globalData.avatarUrl,
             postID:new Date().getTime(),
             // postID:`广州-海北-XYW-${new Date().getFullYear()}${(sum*1+i)<100?(sum*1+i)>10?`0${(sum*1+i)}`:`00${(sum*1+i)}`:sum*1+i}`,
             date:this.time()
@@ -164,6 +165,36 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+     // 获取用户信息
+     wx.getSetting({
+      success: res => {
+        if (res.authSetting['scope.userInfo']) {
+          // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
+          wx.getUserInfo({
+            success: res => {
+              console.log(res)
+              this.setData({
+                avatarUrl: res.userInfo.avatarUrl,
+                userInfo: res.userInfo
+              })
+            }
+          })
+        }else{
+          wx.showModal({
+            title: '失败',
+            content: '未授权,请重新授权',
+            showCancel:false,
+            success (res) {
+              if (res.confirm) {
+                wx.navigateTo({
+                  url:"../getUserInfo/getUserInfos"
+                })
+              } 
+            }
+          })
+        }
+      }
+    })
     var that = this
     //  调用login云函数获取openid
     wx.cloud.callFunction({

@@ -26,7 +26,7 @@
                                 <image src="{{item.avatarUrl}}"></image>
                         </view>
                         <view class="check-right">
-                            <view class="check-intro">名字:{{item.name}}  序列号:<text class="myid">广州-海北-XYW-2019{{(totalCount-index)*1<100?((totalCount-index)*1>10?'0'+(totalCount-index)*1:'00'+(totalCount-index)*1):(totalCount-index)*1}}</text></view>
+                            <view class="check-intro">名字:{{item.name}}  序列号:<text class="myid">广州-海北-XYW-2019{{(totalCount*1-index*1)*1<100?((totalCount*1-index*1)*1>10?'0'+(totalCount*1-index*1)*1:'00'+(totalCount*1-index*1)*1):(totalCount*1-index*1)*1}}</text></view>
                             <!-- <view class="check-label">
                                 <view class="label-text green">{{index}}</view>
                                 (totalCount-index)*1<100?(totalCount-index)*1>10?'0'+(totalCount-index)*1:'00'+totalCount-index)*1:totalCount-index)*1
@@ -38,6 +38,7 @@
                         </view>
                     </view>
             </block>
+            <view class="bottom_reach"></view>
         </view>
         <view class="none_data" wx:else>暂无数据</view>
         <view class="add-btn" bindtap="goEdit">新增报销</view>

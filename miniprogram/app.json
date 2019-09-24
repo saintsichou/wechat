@@ -1,8 +1,8 @@
 {
   "pages": [
+    "pages/getUserInfo/getUserInfos",
     "pages/list/list",
     "pages/list_edit/list_edit",
-    
     "pages/home/home",
     "pages/login/login",
     "pages/index/index",

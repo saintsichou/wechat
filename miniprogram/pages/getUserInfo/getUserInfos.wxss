@@ -1,0 +1,44 @@
+/* pages/getUserInfo/getUserInfos.wxss */
+.login-bg-contain{
+	margin:0 auto;
+	width:100%;
+}
+.login-bg{
+	background-size: cover;
+	width: 144rpx;
+	height: 144rpx;
+	border-radius:50%;
+	position: absolute;
+	top: 114rpx;
+	left: 50%; 
+	transform: translate(-50%, 0); /* 50%为自身尺寸的一半 */
+	-webkit-transform: translate(-50%, 0);	
+	box-shadow:0 0 10rpx rgba(0,0,0,0.2);
+}
+.logo-title{
+	width:100%;
+	text-align:center;
+	font-size: 36rpx;
+	color: #333333;
+	line-height: 36rpx;
+	position:absolute;
+	top:320rpx;
+}
+.place-location{
+  text-align: center;
+	top:666rpx;
+}
+.dialog-btn-v3{
+  border:none;
+  background: #f36f56;
+  color:#fff;
+  padding:0 20rpx;
+  box-sizing: border-box;
+}
+.tips{
+  position: absolute;
+  top:500rpx;
+  width: 100%;
+  text-align: center;
+  color:#f36f56;
+}

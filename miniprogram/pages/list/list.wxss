@@ -1,4 +1,7 @@
 /* pages/list/list.wxss */
+.check-list{
+  min-height: 100vh;
+}
 .info_block {
   padding-bottom: 100rpx;
 }
@@ -43,7 +46,11 @@
 }
 
 .check-content{
-  padding-bottom:100rpx;
+  padding-bottom:90rpx;
+}
+.bottom_reach{
+  width: 100%;
+  height: 120rpx;
 }
 .check-img{
   width: 90rpx;

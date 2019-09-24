@@ -78,23 +78,6 @@ debounce (func, delay) {
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-      // 获取用户信息
-    wx.getSetting({
-        success: res => {
-          if (res.authSetting['scope.userInfo']) {
-            // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
-            wx.getUserInfo({
-              success: res => {
-                app.globalData.avatarUrl = res.userInfo.avatarUrl,
-                this.setData({
-                  avatarUrl: res.userInfo.avatarUrl,
-                  userInfo: res.userInfo
-                })
-              }
-            })
-          }
-        }
-    })
     var that = this
     //  调用login云函数获取openid
     wx.cloud.callFunction({
@@ -116,7 +99,7 @@ debounce (func, delay) {
         .catch(error=>{console.log(error)})
         that.infos
         .orderBy('postID', 'desc')
-        .limit(10)
+        .limit(12)
         .get()
         .then(res=>{
             console.log(res)
@@ -173,7 +156,7 @@ debounce (func, delay) {
     })
     this.infos
     .orderBy('postID', 'desc')
-    .limit(10)
+    .limit(12)
     .get()
     .then(res=>{
         console.log(res)
@@ -189,6 +172,7 @@ debounce (func, delay) {
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
+    console.log('dididi')
     var that = this;
     var temp = [];
     // 获取后面十条
@@ -196,7 +180,7 @@ debounce (func, delay) {
       try {
         this.infos
           .skip(10)
-          .limit(10) // 限制返回数量为 5 条
+          .limit(10) // 限制返回数量为 10 条
           .orderBy('postID', 'desc')  // 排序
           .get({
             success: function (res) {

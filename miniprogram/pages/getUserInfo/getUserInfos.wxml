@@ -1,0 +1,10 @@
+<view class="warp">
+  <view class='login-bg-contain'>
+     <view class='login-bg' style="background-image: url(https://6b65-keenstar-5871c6-1300213761.tcb.qcloud.la/my-image.jpeg?sign=d87a20961b88ba083820e8c51a05c15d&t=1568888357)"></view>
+  </view>
+  <view class="tips">欢迎使用～</view>
+<button open-type="getUserInfo" wx:if="{{canIUse}}" bindgetuserinfo="bindGetUserInfo" class="dialog-btn-v3 place-location">
+  立即一键登录
+</button>
+<view wx:else class="place-location">请升级微信版本</view>
+</view>
