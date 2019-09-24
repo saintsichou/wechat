@@ -10,3 +10,11 @@
 
 - [云开发文档](https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html)
 
+## 微信云开发小demo
+
+- 使用微信云数据端开发的一个申报流水号的小demo（主要是三个页面）
+- 主要分为三个部分
+  1. 登录获取个人信息（getuserinfo）
+  2. 获取流水号列表 (list)
+  3. 申请流水号 (list_edit)
+- 主要用到微信数据库的增，查功能
